@@ -1,0 +1,12 @@
+services:
+  force_tfa_event_subscriber:
+    class: Drupal\force_tfa\EventSubscriber\ForceTfaEventSubscriber
+    arguments:
+      - '@current_user'
+      - '@entity_type.manager'
+      - '@messenger'
+      - '@request_stack'
+      - '@user.data'
+      - '@config.factory'
+    tags:
+      - {name: event_subscriber}

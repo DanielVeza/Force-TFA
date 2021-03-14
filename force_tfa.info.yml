@@ -1,0 +1,5 @@
+name: 'Force TFA'
+type: module
+description: 'Force users to set up with TFA'
+package: 'Security'
+core_version_requirement: '^8 || ^9'
