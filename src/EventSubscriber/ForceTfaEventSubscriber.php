@@ -141,7 +141,7 @@ class ForceTfaEventSubscriber implements EventSubscriberInterface {
       $this->messenger->deleteByType('error');
       $message = new FormattableMarkup('You are required to setup two-factor authentication <a href="@link">here.</a>', ['@link' => $tfaValidationUrl]);
       $this->messenger->addError($message);
-      //$event->setResponse(new RedirectResponse($url));
+      $event->setResponse(new RedirectResponse($url));
     }
   }
 
